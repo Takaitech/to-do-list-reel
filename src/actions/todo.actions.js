@@ -10,6 +10,12 @@ export const deleteTodo = uid => ({
     uid
 })
 
+export const editTodo = (uid, text) => ({
+    type: "EDIT_TODO",
+    uid,
+    text
+})
+
 
 export const toggleTodo = uid => ({
     type: "TOGGLE_TODO",
@@ -17,7 +23,7 @@ export const toggleTodo = uid => ({
 })
 
 export const updateFilter = filter => ({
-    type: "UPDATEFILTER",
+    type: "UPDATE_FILTER",
     filter
 })
 

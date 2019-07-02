@@ -1,10 +1,12 @@
 import React from 'react'
 
-
-export default Todo = ({text}) => {
+const Todo = ({text}) => {
     return (
-        <input value={text}>
-
-        </input>
+        <li>
+            <input type="text" defaultValue={text}>
+            </input>
+        </li>
     )
 }
+
+export default Todo
