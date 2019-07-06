@@ -23,18 +23,10 @@ const todos = (state = [], action) => {
                 })
         
         case "TOGGLE_TODO":
-            return state.map(todo => {
-                    if(todo.uid === action.uid) {
-                        if(todo.completed === false) {
-                            todo.completed = true
-                            return todo
-                        } else if (todo.completed === true) {
-                            todo.completed = false
-                            return todo
-                        }
-                    }
-                    return todo
-                })
+                return state.map(
+                    todo =>
+                      todo.uid === action.uid ? { ...todo, completed: !todo.completed } : todo
+                  );
     
         default: return state
     }   

@@ -1,0 +1,196 @@
+* {
+    font-family: 'Inconsolata', monospace;
+}
+
+html {
+    background-color: black;
+
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+    text-align: center;
+}
+
+.title{
+    font-family: 'ZCOOL QingKe HuangYou';
+    color:white;
+    font-size: 60px;
+    letter-spacing: 3px;
+    text-decoration: line-through;
+}
+
+.filterBar {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.filterButton {
+    border:none;
+    padding: 5px;
+    margin-right: 15px;
+    background-color: Transparent;
+    color: rgb(210, 210, 210);
+    font-size: 16px;
+    outline: none;
+
+
+}
+.filterButtonActive {
+    outline: none;
+    border:none;
+    padding: 5px;
+    margin-right: 15px;
+    background-color: Transparent;
+    color: white;
+    font-size: 22px;
+    transition: all, 0.5s;
+
+}
+
+
+
+ul {
+    margin:0;
+    padding: 0;
+}
+li {
+    margin-left: auto;
+    margin-right:auto;
+    direction: rtl;
+    width:340px;
+    transition: all, 0.5s;
+    color:white;
+    opacity: 1;
+    margin-top: 5px;
+
+}
+
+.todoList {
+    position: relative;
+    list-style: none;
+    overflow: scroll;
+    height: 325px;
+}
+
+.todo {
+
+    padding: 10px;
+    max-width: 240px;
+    max-height: 50px;
+    font-size: 25px;
+    background-color: rgba(246, 246, 246,0);
+    color:white;
+    outline: none;
+    border: 1px white solid;
+    border-right: none;
+    resize: none;
+    margin-right: 50px;
+
+}
+
+.boxBottom {
+    border: white 1px solid;
+    height: 30px;
+    width: 358px;
+    transform: perspective(200px) rotateY(20deg) rotateX(20deg);
+
+}
+
+.deleteButton {
+    position: absolute;
+    background-color: transparent;
+    float: left;
+    color:white;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+
+}
+
+.checkBox{
+    text-align-last: right;
+    display: block;
+    direction: rtl;
+    background-color: rgba(255, 255,255 ,.2); 
+    height: 72px;
+    border:none;
+    outline: none;
+    border: 1px white solid;
+    border-left:none;
+    width: 72px;
+    position: absolute;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all, 0.5s;
+    margin-right: 9px;
+
+}
+
+.checkBoxCompleted{
+    text-align-last: right;
+    display: block;
+    direction: rtl;
+    background-color: rgba(255, 255,255 ,.2); 
+    height: 72px;
+    border:none;
+    outline: none;
+    border: 1px white solid;
+    border-left:none;
+    width: 325px;
+    position: absolute;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all, 0.5s;
+
+}
+
+li > * {
+    direction: ltr;
+}
+
+form {
+    text-align: center;
+}
+
+.todoInput {
+    width: 280px;
+    border: none;
+    padding:20px;
+    font-size: 25px;
+    background-color:white;
+    margin-left: auto;
+    margin-right:auto;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.todoSubmit {
+    display: block;
+    border:none;
+    background-color: rgba(246, 246, 246,0.6);
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 29px;
+
+}
