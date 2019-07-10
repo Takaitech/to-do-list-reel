@@ -4,7 +4,12 @@
 
 html {
     background-color: black;
-
+    position: fixed;
+    left: 0;
+    right:0;
+    bottom:0;
+    top:0;
+   
 }
 
 body {
@@ -14,129 +19,139 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    
 }
 
 .app {
     text-align: center;
 }
-
+/* Header */
 .title{
     font-family: 'ZCOOL QingKe HuangYou';
     color:white;
     font-size: 60px;
     letter-spacing: 3px;
     text-decoration: line-through;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
 }
 
+
+/* Filter Bar */
 .filterBar {
-    width: 308px;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
-    height:10px;
-    margin-bottom: 40px;
-    border-top: 1px solid white;
-}
-
-.ACTIVELinkContainer, 
-.ALLLinkContainer, 
-.ALL_2LinkContainer, 
-.COMPLETEDLinkContainer{
-    display: inline-block;
-    height:40px;
-    width: 40px;
-    padding:0;
-    position: relative;
-    bottom:29px;
+    height:50px;
+    border-top: 1px solid  rgba(255, 255, 255, 0.7);
     text-align: center;
 }
 
-.ACTIVELinkContainer {
-    right: 110px;
+.ACTIVE_LinkContainer, 
+.ALL_LinkContainer, 
+.ALL_2_LinkContainer, 
+.COMPLETED_LinkContainer{
+    display: inline-block;
+    height:20px;
+    width: 20px;
+    padding:0;
+    position: relative;
+    bottom:11px;
+    text-align: center;
+}
+
+
+.ALL_2_LinkContainer {
+    width: 30px;
+    margin-right: 50px;
+    position: relative;
+    right:7px;
+}
+.ALL_LinkContainer {
+    width: 30px;
+    margin-left: 50px;
+    position: relative;
+    left:7px;
+}
+.ALL_LinkContainer:hover .ALLText,
+.ALL_2_LinkContainer:hover .ALL_2Text,
+.COMPLETED_LinkContainer:hover .COMPLETEDText,
+.ACTIVE_LinkContainer:hover .ACTIVEText
+{   
+    visibility: visible;
 }
 
 .ACTIVE {
     background-color: black;
-}
-
-.ALL_2LinkContainer {
-    width: 20px;
+    color: white;
 }
 
 .ALL {
-    width: 20px;
-    position: relative;
-    
+    color: transparent;
 }
-
 
 .ALL_2 {
-    width: 20px;
+    text-align: center;
+    color: transparent;
+
     background-color: black;
-    position: relative;
-    right:13px;
 }
 
-
-.COMPLETEDLinkContainer {
-    left:110px;
-}
-
-
-
-
-.ALLLinkContainer:hover .ALLText {
-    visibility: visible;
-}
 .ALLText {
-position: relative;
-left:10px;
+    position: relative;
+    left:10px;
 }
+
 .ALL_2Text {
     position: relative;
-    right:22px;
+    right:6px;
 }
 
-.ALL_2LinkContainer:hover .ALL_2Text {
-    visibility: visible;
+.COMPLETEDText{
+    position: relative;
+    right:25px;
 }
-
-.COMPLETEDLinkContainer:hover .COMPLETEDText {
-    visibility: visible;
+.ACTIVEText {
+    position: relative;
+    right:12px;
 }
-
-.ACTIVELinkContainer:hover .ACTIVEText {
-    visibility: visible;
-}
-
 
 .COMPLETEDText, .ALLText, .ACTIVEText, .ALL_2Text {
     color:white;
     position: relative;
-    bottom: 15px;
     visibility: hidden;
+    font-size: 15px;
+    top:10px;
+    margin:auto;
 }
 
 .filterButton {
     height:20px;
     width: 20px;
     padding:0;
+    line-height: 18px;
+    text-align: center;
     border: 1px solid white;
     border-radius: 50%;
     transform: scale(1);
     transition: all, 0.5s;
     outline:none;
+    font-size: 12px;
 }
-
 
 .filterButtonActive{
     height:20px;
     width: 20px;
+    padding:0;
+    text-align: center;
+    line-height: 18px;
     border: 1px solid white;
     border-radius: 50%;
     transition: all, 0.5s;
-    transform: scale(1.4);  
+    transform: scale(1.6);  
     outline:none;
+
+    font-size: 12px;
+
 }
 
 
@@ -150,7 +165,6 @@ li {
     margin-left: auto;
     margin-right:auto;
     direction: rtl;
-    width:340px;
     transition: all, 0.5s;
     color:white;
     opacity: 1;
@@ -162,33 +176,40 @@ li {
     margin-right: auto;
     position: relative;
     list-style: none;
-    height: 345px;
-    width: 400px;
+    height: 220px;
+    width: 280px;
     color :white;
     position: relative;
     overflow: scroll;
+    text-align: center;
 }
 
-.checkMark {
-    height: 30px;
-    float: left;
+.messageSpan {
+    font-size: 20px;
+    position: relative;
+    top:40px;
 }
+
 .todo { 
-    width: 340px;
-    height: 60px;
+    width: 90%;
+    height: 50px;
     border: 1px solid white;
     background-color: black;
     color:white;
     outline:none;
-    line-height: 60px;
+    line-height: 50px;
     z-index: 3;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gradient {
     background: linear-gradient(black,rgba(255,255,255,0));
-    width: 100%;
+    width: 90%;
     height: 3%;
     position: fixed;
+    display: block;
 
 }
 
@@ -199,29 +220,15 @@ li {
     background-color: transparent;
     color:#B4B4B4;
     padding: 5px 10px 5px 10px;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
     float: left;
-    width: 200px;
+    width: 70%;
     resize: none;
     outline: none;
     height: 50px;
-    line-height: 25px;
-}
+    line-height: 20px;
 
-.connectorRight {
-    position: relative;
-    right:16px;
-    width: 200px;
-    height: 20px;
-}
-
-.connectorLeft {
-    position: relative;
-    right:15px;
-    width: 200px;
-    height: 20px;
-    border-left: 1px solid white;
 }
 
 
@@ -238,7 +245,6 @@ li {
 }
 
 .checkCircle{
-    margin-left: 55px;
     height:31px;
     width: 31px;
     border-radius: 50%;
@@ -246,11 +252,13 @@ li {
     border: 2px solid white;
     display: table-cell;
     vertical-align: middle;
+    outline: none;
+    transform: scale(1);
+    transition: all, 0.5s;
 }
 
-.checkCircleCompleted{
 
-    margin-left: 55px;
+.checkCircleCompleted{
     height:31px;
     width: 31px;
     border-radius: 50%;
@@ -258,6 +266,9 @@ li {
     border: 2px solid white;
     display: table-cell;
     vertical-align: middle;
+    outline: none;
+    transform: scale(1);
+    transition: all, 0.5s;
 }
 
 li > * {
@@ -271,7 +282,7 @@ form {
 .todoInput {
     color: #B4B4B4;
     outline: none;
-    width: 250px;
+    width: 200px;
     border: none;
     padding:20px;
     font-size: 25px;
@@ -286,14 +297,77 @@ form {
     display: block;
     border: 2px solid white;
     background-color: black;
-    font-size: 30px;
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
+    padding: 3px;
     border-radius: 50px;
     margin-left: 10px;
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     line-height: 29px;
+    outline: none;
+    opacity: 0.8;
 
 }
+
+.todoSubmit:hover {
+    opacity: 1;
+}
+
+/* Small Screen Mobiles */
+@media (min-width: 375px) {
+
+    .todoList {
+        height: 380px;
+    }
+    
+}
+
+/* Mobiles */
+@media (min-width:400px) {
+    .filterBar{
+        width: 250px;
+    }
+
+
+    .todoList {
+        height: 340px;
+        width: 300px;
+    }
+
+    .todo {
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .todoText {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .ALL_2_LinkContainer {
+        margin-right: 75px;
+        position: relative;
+    }
+    .ALL_LinkContainer {
+        margin-left: 75px;
+        position: relative;
+    }
+    
+}
+
+
+
+
+/* desktop */
+.checkCircle:hover {
+    transform: scale(1.2);
+    transition: all, 0.5s;
+}
+
+.checkCircleCompleted:hover {
+    transform: scale(1.2);
+    transition: all, 0.5s;
+}
+

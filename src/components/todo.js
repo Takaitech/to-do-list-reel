@@ -3,7 +3,6 @@ import styles from '../styles.module.css'
 
 const Todo = ({text, uid, completed, onClick, toggleTodo, editTodo, filter}) => {
 
-    console.log(filter)
     return (
         <li >
             <div className={styles.connectorRight}></div>
