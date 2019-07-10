@@ -12,13 +12,15 @@ const AddTodo = ({dispatch}) => {
         }
         input.value = ""
     }
+
     return(
         <form onSubmit={(e) => {handleSubmit(e)}}>
             <input className={styles.todoInput} ref={node => (input = node)} type="text" placeholder="..."></input>
-            <input type="submit" value="+" className={styles.todoSubmit}></input>
+            <input type="image" value="+" src="./add-icon.png" className={styles.todoSubmit} alt="Add sign"></input>
         </form>
     )
 }
+
 
 
 export default connect()(AddTodo)

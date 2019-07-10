@@ -3,22 +3,23 @@ import { connect } from 'react-redux'
 import Filter from '../components/Filter'
 import styles from '../styles.module.css'
 
-const Filters = ({ activeFilter, dispatch }) => {
-    
+const Filters = ({ activeFilter, todos, dispatch }) => {
+
+
     return(
         <div className={styles.filterBar}>
-            <Filter activeFilter={activeFilter} filter="ACTIVE" dispatch={dispatch}/>
-            <Filter activeFilter={activeFilter} filter="ALL" dispatch={dispatch} />
-            <Filter activeFilter={activeFilter}  filter="ALL_2" dispatch={dispatch} />
-            <Filter activeFilter={activeFilter} filter="COMPLETED" dispatch={dispatch} />
+            <Filter activeFilter={activeFilter} todos={todos} filter="ACTIVE" dispatch={dispatch}/>
+            <Filter activeFilter={activeFilter} todos={todos} filter="ALL" dispatch={dispatch} />
+            <Filter activeFilter={activeFilter} todos={todos} filter="ALL_2" dispatch={dispatch} />
+            <Filter activeFilter={activeFilter} todos={todos} filter="COMPLETED" dispatch={dispatch} />
         </div>
     )
 }
 
 
-
 const mapStateToProps = state => ({
-    activeFilter: state.filter
+    activeFilter: state.filter,
+    todos: state.todos
 })
 
 const mapDispatchToProps = dispatch => ({

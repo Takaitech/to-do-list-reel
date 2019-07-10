@@ -8,6 +8,8 @@ import {editTodo} from '../actions/todo.actions'
 import styles from '../styles.module.css'
 
 const TodoList = ({todos,toggleTodo, deleteTodo, editTodo, filter}) => {
+    
+
     return(
         <ul className={styles.todoList}>
             <div className={styles.gradient}></div>
