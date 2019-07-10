@@ -11,7 +11,7 @@ const TodoList = ({todos,toggleTodo, deleteTodo, editTodo, filter}) => {
     return(
         <ul className={styles.todoList}>
             <div className={styles.gradient}></div>
-            {todos.length === 0 ? "no more" :
+            {todos.length === 0 ? <span className={styles.messageSpan}>You have no todos here</span> :
             todos.map((todo, index )=> (
              <Todo key={index} uid={todo.uid} text={todo.text} completed={todo.completed}
              editTodo={editTodo}
