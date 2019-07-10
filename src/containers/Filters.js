@@ -4,11 +4,13 @@ import Filter from '../components/Filter'
 import styles from '../styles.module.css'
 
 const Filters = ({ activeFilter, dispatch }) => {
+    
     return(
         <div className={styles.filterBar}>
             <Filter activeFilter={activeFilter} filter="ACTIVE" dispatch={dispatch}/>
-            <Filter activeFilter={activeFilter} filter="COMPLETED" dispatch={dispatch} />
             <Filter activeFilter={activeFilter} filter="ALL" dispatch={dispatch} />
+            <Filter activeFilter={activeFilter}  filter="ALL_2" dispatch={dispatch} />
+            <Filter activeFilter={activeFilter} filter="COMPLETED" dispatch={dispatch} />
         </div>
     )
 }
