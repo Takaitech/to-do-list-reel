@@ -87,13 +87,17 @@ body {
 
 .ALL {
     color: transparent;
+    background-color: white;
 }
 
 .ALL_2 {
     text-align: center;
     color: transparent;
-
     background-color: black;
+}
+
+.COMPLETED {
+    background-color: white;
 }
 
 .ALLText {
@@ -352,7 +356,8 @@ form {
 
 
 
-/* desktop */
+@media (min-width: 1025px) {
+  
 .checkCircle:hover {
     transform: scale(1.2);
     transition: all, 0.5s;
@@ -361,5 +366,17 @@ form {
 .checkCircleCompleted:hover {
     transform: scale(1.2);
     transition: all, 0.5s;
+}
+
+.gradient {
+    background: linear-gradient(black,rgba(255,255,255,0));
+    width: 90%;
+    height: 3%;
+    position: fixed;
+    display: block;
+
+}
+
+    
 }
 
