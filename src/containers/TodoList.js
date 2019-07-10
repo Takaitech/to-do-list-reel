@@ -7,14 +7,16 @@ import {deleteTodo} from '../actions/todo.actions'
 import {editTodo} from '../actions/todo.actions'
 import styles from '../styles.module.css'
 
-const TodoList = ({todos,toggleTodo, deleteTodo, editTodo}) => {
+const TodoList = ({todos,toggleTodo, deleteTodo, editTodo, filter}) => {
     return(
         <ul className={styles.todoList}>
-            {todos.map((todo, index )=> (
+            <div className={styles.gradient}></div>
+            {todos.length === 0 ? "no more" :
+            todos.map((todo, index )=> (
              <Todo key={index} uid={todo.uid} text={todo.text} completed={todo.completed}
              editTodo={editTodo}
              toggleTodo={toggleTodo}
-             onClick={() => {deleteTodo(todo.uid)}}  />
+             onClick={() => {deleteTodo(todo.uid)}} filter={filter} />
             ))}
         </ul>
 
@@ -33,7 +35,8 @@ const filterTodos = (todos, filter) => {
 
 
 const mapStateToProps = state => ({
-    todos: filterTodos(state.todos, state.filter)
+    todos: filterTodos(state.todos, state.filter),
+    filter: state.filter
 })
 
 const mapDispatchToProps = dispatch => ({

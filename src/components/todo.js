@@ -1,15 +1,19 @@
 import React from 'react'
 import styles from '../styles.module.css'
 
-const Todo = ({text, uid, completed, onClick, toggleTodo, editTodo }) => {
+const Todo = ({text, uid, completed, onClick, toggleTodo, editTodo, filter}) => {
 
-    console.log(uid)
+    console.log(filter)
     return (
         <li >
-            <button uid={uid} className={!completed ? styles.checkBox : styles.checkBoxCompleted} onClick={()=>{toggleTodo(uid)}} ></button>
-            <textarea maxLength="35" rows="2" cols="50" className={styles.todo}  value={text} onChange={(e) => {editTodo(uid,e.target.value)}}>
-            </textarea>
-            <button className={styles.deleteButton} onClick={onClick}>X</button>
+            <div className={styles.connectorRight}></div>
+            <button className={styles.deleteButton} onClick={onClick}></button>
+            <div className={styles.todo}>
+                <textarea className={styles.todoText}maxLength="35" rows="2" cols="50"  value={text} onChange={(e) => {editTodo(uid,e.target.value)}}>
+                </textarea>
+            <button uid={uid} className={!completed ? styles.checkCircle : styles.checkCircleCompleted} onClick={()=>{toggleTodo(uid)}} ></button>
+            </div>
+
         </li>
     )
 }
