@@ -319,7 +319,7 @@ form {
 @media (min-width: 375px) {
 
     .todoList {
-        height: 380px;
+        height: 290px;
     }
     
 }
@@ -332,19 +332,11 @@ form {
 
 
     .todoList {
-        height: 340px;
+        height: 290px;
         width: 300px;
     }
 
-    .todo {
-        height: 60px;
-        line-height: 60px;
-    }
 
-    .todoText {
-        font-size: 20px;
-        line-height: 25px;
-    }
 
     .ALL_2_LinkContainer {
         margin-right: 75px;
