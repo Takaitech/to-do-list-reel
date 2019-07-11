@@ -22,6 +22,14 @@ body {
     
 }
 
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
 .app {
     text-align: center;
 }
@@ -55,7 +63,7 @@ body {
     width: 20px;
     padding:0;
     position: relative;
-    bottom:11px;
+    bottom:14px;
     text-align: center;
 }
 
@@ -129,8 +137,8 @@ body {
 }
 
 .filterButton {
-    height:20px;
-    width: 20px;
+    height:26px;
+    width: 26px;
     padding:0;
     line-height: 18px;
     text-align: center;
@@ -139,7 +147,7 @@ body {
     transform: scale(1);
     transition: all, 0.5s;
     outline:none;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .filterButtonActive{
@@ -157,9 +165,6 @@ body {
     font-size: 12px;
 
 }
-
-
-
 
 ul {
     margin:0;
@@ -181,11 +186,19 @@ li {
     position: relative;
     list-style: none;
     height: 220px;
-    width: 280px;
+    width: 400px;
     color :white;
     position: relative;
     overflow: scroll;
     text-align: center;
+}
+
+.todoList:hover > * {
+    opacity: 0.5;
+}
+
+.todoList:hover > *:hover {
+    opacity: 1;
 }
 
 .messageSpan {
@@ -195,13 +208,13 @@ li {
 }
 
 .todo { 
-    width: 90%;
+    width: 70%;
     height: 50px;
     border: 1px solid white;
     background-color: black;
     color:white;
     outline:none;
-    line-height: 50px;
+    line-height: 48px;
     z-index: 3;
     margin-top: 20px;
     margin-left: auto;
@@ -209,11 +222,7 @@ li {
 }
 
 .gradient {
-    background: linear-gradient(black,rgba(255,255,255,0));
-    width: 90%;
-    height: 3%;
-    position: fixed;
-    display: block;
+    display: none;
 
 }
 
@@ -227,7 +236,7 @@ li {
     font-size: 18px;
     border: none;
     float: left;
-    width: 70%;
+    width: 68%;
     resize: none;
     outline: none;
     height: 50px;
@@ -235,26 +244,59 @@ li {
 
 }
 
-
-.deleteButton {
-    position: absolute;
+.deleteMode {
     background-color: transparent;
-    float: left;
     color:white;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-    display: none;
 }
 
+
+.deleteButton {
+    float:left;
+    width: 52px;
+    height: 52px;
+    background-color: transparent;
+    color:white;
+    font-size: 20px;
+    outline: none;
+    transition: all, 1s;
+    color: white;
+    position: absolute;
+    left: 2px;
+    border:none;
+    border-radius: 50%;
+    border: white 1px solid;
+    transform: scale(0.5)
+
+}
+
+.deleteButton:hover {
+    border: double 10px white;
+    transition: all, 0.5s;
+    transform: scale(0.75)
+}
+
+.deleteMode{
+width: 100px;
+height: 20px;
+margin-top: 10px;
+opacity: 0.6;
+}
+
+.deleteMode:hover {
+    transition: all, 0.5s;
+    opacity: 1;
+    outline: none;
+
+}
+
+
 .checkCircle{
+    margin-right: 5px;
     height:31px;
     width: 31px;
     border-radius: 50%;
     background-color: transparent;
     border: 2px solid white;
-    display: table-cell;
     vertical-align: middle;
     outline: none;
     transform: scale(1);
@@ -263,12 +305,12 @@ li {
 
 
 .checkCircleCompleted{
+    margin-right: 5px;
     height:31px;
     width: 31px;
     border-radius: 50%;
     background-color: white;
     border: 2px solid white;
-    display: table-cell;
     vertical-align: middle;
     outline: none;
     transform: scale(1);
@@ -337,7 +379,6 @@ form {
 
     .todoList {
         height: 290px;
-        width: 300px;
     }
 
 
@@ -376,7 +417,6 @@ form {
     display: block;
 
 }
-
     
 }
 
