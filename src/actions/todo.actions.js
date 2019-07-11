@@ -22,6 +22,11 @@ export const toggleTodo = uid => ({
     uid
 })
 
+export const updateMode = mode => ({
+    type: "UPDATE_MODE",
+    mode
+})
+
 export const updateFilter = filter => ({
     type: "UPDATE_FILTER",
     filter

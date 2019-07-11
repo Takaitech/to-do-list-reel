@@ -3,12 +3,14 @@ import AddTodo from '../containers/AddTodo'
 import TodoList from '../containers/TodoList'
 import Filters from '../containers/Filters'
 import styles from '../styles.module.css'
+import DeleteMode from '../containers/DeleteMode'
 
 const App = () => (
     <div className={styles.app}>
         <h1 className={styles.title}>TODO</h1>
         <Filters />
         <TodoList />
+        <DeleteMode />
         <AddTodo />
     </div>
 );
