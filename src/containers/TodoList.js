@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-//import  {bindActionCreators} from 'redux'
 import Todo from '../components/todo'
 import {toggleTodo} from '../actions/todo.actions'
 import {deleteTodo} from '../actions/todo.actions'

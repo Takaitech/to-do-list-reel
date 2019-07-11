@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../styles.module.css'
 
 const Todo = ({text, uid, completed, onClick, toggleTodo, editTodo, filter, mode}) => {
-    console.log(mode)
+
     return (
         <li >
             <div className={styles.todo}>
