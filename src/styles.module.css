@@ -23,17 +23,19 @@ body {
 }
 
 .show {
-    visibility: visible;
+    transition: all, 0.5s;
+    opacity: 1;
 }
 
 .hide {
+    transition: all, 0.5s;
+    opacity: 0;
     visibility: hidden;
 }
 
 .app {
     text-align: center;
 }
-/* Header */
 .title{
     font-family: 'ZCOOL QingKe HuangYou';
     color:white;
@@ -43,8 +45,6 @@ body {
     margin-bottom: 50px;
 }
 
-
-/* Filter Bar */
 .filterBar {
     width: 200px;
     margin-left: auto;
@@ -67,7 +67,6 @@ body {
     text-align: center;
 }
 
-
 .ALL_2_LinkContainer {
     width: 30px;
     margin-right: 50px;
@@ -80,11 +79,11 @@ body {
     position: relative;
     left:7px;
 }
+
 .ALL_LinkContainer:hover .ALLText,
 .ALL_2_LinkContainer:hover .ALL_2Text,
 .COMPLETED_LinkContainer:hover .COMPLETEDText,
-.ACTIVE_LinkContainer:hover .ACTIVEText
-{   
+.ACTIVE_LinkContainer:hover .ACTIVEText{   
     visibility: visible;
 }
 
@@ -186,20 +185,13 @@ li {
     position: relative;
     list-style: none;
     height: 220px;
-    width: 400px;
+    width: 300px;
     color :white;
     position: relative;
     overflow: scroll;
     text-align: center;
 }
 
-.todoList:hover > * {
-    opacity: 0.5;
-}
-
-.todoList:hover > *:hover {
-    opacity: 1;
-}
 
 .messageSpan {
     font-size: 20px;
@@ -216,7 +208,7 @@ li {
     outline:none;
     line-height: 48px;
     z-index: 3;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -244,6 +236,15 @@ li {
 
 }
 
+
+.todoList:hover > * {
+    opacity: 0.5;
+}
+
+.todoList:hover > *:hover {
+    opacity: 1;
+}
+
 .deleteMode {
     background-color: transparent;
     color:white;
@@ -261,18 +262,12 @@ li {
     transition: all, 1s;
     color: white;
     position: absolute;
-    left: 2px;
+    left: 7px;
     border:none;
     border-radius: 50%;
     border: white 1px solid;
     transform: scale(0.5)
 
-}
-
-.deleteButton:hover {
-    border: double 10px white;
-    transition: all, 0.5s;
-    transform: scale(0.75)
 }
 
 .deleteMode{
@@ -282,16 +277,8 @@ margin-top: 10px;
 opacity: 0.6;
 }
 
-.deleteMode:hover {
-    transition: all, 0.5s;
-    opacity: 1;
-    outline: none;
-
-}
-
-
 .checkCircle{
-    margin-right: 5px;
+    margin-left: 15px;
     height:31px;
     width: 31px;
     border-radius: 50%;
@@ -305,7 +292,7 @@ opacity: 0.6;
 
 
 .checkCircleCompleted{
-    margin-right: 5px;
+    margin-left: 15px;
     height:31px;
     width: 31px;
     border-radius: 50%;
@@ -334,9 +321,9 @@ form {
     font-size: 25px;
     margin-left: auto;
     margin-right:auto;
-    margin-top: 20px;
     background-color: transparent;
     border-bottom: 1px solid white;
+    border-radius: 0;
 }
 
 .todoSubmit {
@@ -362,23 +349,28 @@ form {
 }
 
 /* Small Screen Mobiles */
-@media (min-width: 375px) {
+@media (min-width: 320px) {
 
     .todoList {
-        height: 290px;
+        width: 315px;
+        height: 205px;
+    }
+
+    .deleteButton {
+        left:2px;
     }
     
 }
 
 /* Mobiles */
-@media (min-width:400px) {
+@media (min-width:375px) {
     .filterBar{
         width: 250px;
     }
 
 
     .todoList {
-        height: 290px;
+        height: 270px;
     }
 
 
@@ -397,26 +389,62 @@ form {
 
 
 
-@media (min-width: 1025px) {
-  
-.checkCircle:hover {
+@media (min-width: 768px) {
+    .title {
+        font-size: 80px;
+    }
+    .todoList {
+        height: 280px;
+        width: 425px;
+    }
+
+
+    .checkCircle:hover {
     transform: scale(1.2);
     transition: all, 0.5s;
-}
+    }
 
-.checkCircleCompleted:hover {
+    .checkCircleCompleted:hover {
     transform: scale(1.2);
     transition: all, 0.5s;
-}
+    }
 
-.gradient {
+    .gradient {
     background: linear-gradient(black,rgba(255,255,255,0));
     width: 90%;
     height: 3%;
     position: fixed;
     display: block;
+    }
 
-}
+
+    .deleteButton:hover {
+    border: double 10px white;
+    transition: all, 0.5s;
+    transform: scale(0.75)
+    }
+
+    .deleteMode:hover {
+    transition: all, 0.5s;
+    opacity: 1;
+    outline: none;
+
+    }
+
+    .deleteMode {
+        margin-bottom: 20px;
+    }
+
     
 }
 
+
+
+
+@media (min-width: 1500px) {
+  
+    .todoList {
+        height:470px;
+        width: 425px;
+    }
+  }
