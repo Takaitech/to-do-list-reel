@@ -3,18 +3,19 @@
 }
 
 .todoList::-webkit-scrollbar {
-    width: 12px;
+    width: 4px;
 }
  
 .todoList::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.0); 
     border-radius: 10px;
 }
  
 .todoList::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.0); 
 }
+
 
 html {
     background-color: black;
@@ -54,10 +55,11 @@ body {
 .title{
     font-family: 'ZCOOL QingKe HuangYou';
     color:white;
-    font-size: 60px;
+    font-size: 55px;
     letter-spacing: 3px;
     text-decoration: line-through;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    margin-top: 25px;
 }
 
 .filterBar {
@@ -179,6 +181,15 @@ body {
     font-size: 12px;
 }
 
+.advice {
+    color:white;
+    font-size:12px;
+    width: 300px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 ul {
     margin:0;
     padding: 0;
@@ -203,7 +214,6 @@ li {
     color :white;
     position: relative;
     overflow-y: scroll;
-    text-align: center;
 }
 
 
@@ -225,6 +235,7 @@ li {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .gradient {
@@ -243,6 +254,7 @@ li {
     outline: none;
     height: 50px;
     line-height: 20px;
+    overflow: auto;
 }
 
 .todoList:hover > * {
@@ -363,6 +375,9 @@ form {
 
     .deleteButton {
         left:2px;
+    }
+    .todoText {
+        font-size: 15px;
     }
 }
 
