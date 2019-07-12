@@ -366,9 +366,14 @@ form {
         margin-right: 75px;
         position: relative;
     }
+
     .ALL_LinkContainer {
         margin-left: 75px;
         position: relative;
+    }
+    
+    .deleteButton {
+        left: -5px;
     }
 }
 
@@ -415,6 +420,10 @@ form {
 
     .deleteMode {
         margin-bottom: 20px;
+    }
+
+    .deleteButton {
+        left: 7px;
     }
 }
 
